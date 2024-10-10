@@ -1,7 +1,13 @@
 # liam - DIY Robot lawn mower
 
-Liam is an arduino project for the DIY Robot Lawn Mover.
+Updates by Eu_citzen 2024-10-10 In development:
+- Working (BETA) on a stuck detection function using MPU9150
+- Obsticle avoidance using 3 ultrasonic sensors
+- Merging several libraries into distinct categories
+- Due to increased pin requirements it's being geared towards an STM32 Blackpill module instead of the usual Arduino Uno
 
+
+Liam is an arduino project for the DIY Robot Lawn Mover.
 This program will control your mower and relies on a two coil
 configuration (0 and 1) with an optional (2).
 
