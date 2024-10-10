@@ -28,6 +28,8 @@
 #include "MotionSensor.h"
 #include "Battery.h"
 
+#include <Arduino.h>
+
 class MYDISPLAY : public Print
 {
   public:

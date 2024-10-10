@@ -15,6 +15,7 @@ SETUPDEBUG::SETUPDEBUG(CONTROLLER* controller, WHEELMOTOR* left, WHEELMOTOR* rig
   mower = controller;
   leftMotor = left;
   rightMotor = right;
+  frontMotor = front;
   cutter = cut;
   sensor = bwf;
   compass = comp;
