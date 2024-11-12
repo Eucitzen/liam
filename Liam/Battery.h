@@ -1,61 +1,71 @@
-/*
- Liam - DIY Robot Lawn Mower
+// This is the library for a Battery
+//
+/* Changelog:
+   	2014-12-12 - Jonas
+   		Initial version
+   		
+	2015-06-10 - Morgan M	
+		voltage value x100
+		Filter value for making it possible to set how hard to filter readings(high loads could trigger a emty state)
+		Voltage divator, to compensate for differnt PCB settings
+		readBatteryAndCalcValue, function for reading the soc pin
+		averageSOC size is now word(0-65535);
+		
+============================================
+Placed under the GNU license
 
- Battery Library
-
- ======================
-  Licensed under GPLv3
- ======================
+===============================================
 */
-
 #include <Arduino.h>
 
 #ifndef _BATTERY_H_
 #define _BATTERY_H_
+//Defines Battery types
+#define LEAD_ACID 0  
+#define NIMH 1
+#define LIION 2
 
-// Voltages should be specified in mV (12.56 V = 12560 mV)
-#define LIIONFULL       12560
-#define LIIONEMPTY      10400
-#define NIMHFULL        14500
-#define NIMHEMPTY       11500
-#define LEADACIDFULL    13300
-#define LEADACIDEMPTY   12000
+//All voltage value need to be x100 to avoid decimals (12.54V = 1254)
+#define LIIONFULL 1300
+#define LIIONEMPTY 1040
+#define NIMHFULL 1450
+#define NIMHEMPTY 1150
+#define LEADACIDFULL 1330
+#define LEADACIDEMPTY 1200
 
-// Running average sample size
-#define FILTER        40
-
-// Voltage divider factor x10 to avoid decimal ( 4 = 40)
-#define VOLTDIVATOR   42
+#define FILTER 5        //how hard to filter voltage readings
+#define VOLTDIVATOR 42  //Voltage divider faktor x10 to avoid decimal ( 4 = 40)
 
 
 class BATTERY {
-  public:
-    BATTERY(int type, int sensepin, int dockpin);
+public:
+  BATTERY(int type, int socpin, int dockpin);
 
-    int getBatteryType();
+  //
+  int getBatteryType();
 
-    void setFullyChargedLevel(int level);
-    int getFullyChargedLevel();
+  void setFullyChargedLevel(int level);
+  int getFullyChargedLevel();
 
-    void setDepletedLevel(int level);
-    int getDepletedLevel();
+  void setDepletedLevel(int level);
+  int getDepletedLevel();
 
-    bool mustCharge();
-    bool isBeingCharged();
-    bool isFullyCharged();
+  bool mustCharge();
+  bool isBeingCharged();
+  bool isFullyCharged();
 
-    int getVoltage();
-    void resetVoltage();
-    void updateVoltage();
-    word readBatteryAndCalcValue();
+  void updateSOC();
+  void resetSOC();
+  int getSOC();
+  word readBatteryAndCalcValue();
 
-  private:
-    int batType;
-    int batSensePin;
-    int batDockPin;
-    int fullyChargedLevel;
-    int depletedLevel;
-    word averageVoltage;
+private:
+  int batType;
+  int batSocpin;
+  int batDockpin;
+  int fullyChargedLevel;
+  int depletedLevel;
+  word averageSOC;
 };
 
 #endif /* _BATTERY_H_ */

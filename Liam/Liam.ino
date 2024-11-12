@@ -1,6 +1,6 @@
 
 /* 
-   Welcome to the Liam5_1.1 program
+   Welcome to the Liam5_1 program
    This program will control your mower and relies on a two coil
    configuration (0 and 1) with an optional (2). 
    
@@ -22,15 +22,13 @@
 	(c) Jonas Forssell & team
 	Free to use for all.
 	
-	Changes in this version:
-  - Add ultrasonic sensor support
-  - Use MPU-9150 to check if robot is stuck (BETA)
-  - 3 wheel support for larger robots
-  - Display libraries merged for ease
+	Changes in this version
+  - Removed OzOLED Support for Arduino101 Compatibility
   - -----------------------------------------------------------
-	- 4 wheel support										(Planned)
+	- Ultrasound sensor bumper support						(Planned)
 	- More robust shutdown of mower if wheel overload		(Planned)
 	- Revised Error messages								(Planned)
+	- Support for OLED Display								(Planned)
 	- Signal sensitivity factor in Definition.h				(Planned)
 	- Slower mowing if cutter motor is using much current	(Planned)
 	---------------------------------------------------------------
@@ -39,23 +37,14 @@
 #include <Servo.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-#include <I2Cdev.h>
-#include "RTClib.h"
-#include "HMC5883L.h" 
-#include "Sens9150.h"
+//#include <I2Cdev.h>
 #include "Battery.h"
-#include "Wheelmotor.h"
-#include "CutterMotor.h"
-#include "BWFSensor.h"
-#include "Controller.h"
-//#include "myLcd.h"
 #include "Clock.h"
 #include "Error.h"
-#include "MotionSensor.h"
-#include "Sens5883L.h"
-#include "Sens9150.h"
-#include "Definition.h"
-#include <STM32RTC.h>
+#include "Motioncontrol.h"
+#include "Sensors.h"
+#include "Display.h"
+#include "Definitions.h"
 
 
 // Global variables
@@ -77,7 +66,6 @@ CUTTERMOTOR CutterMotor(BRUSHED, CUTTER_PWM_PIN, CUTTER_CURRENT_PIN);
 // Wheelmotors
 WHEELMOTOR rightMotor(WHEEL_MOTOR_A_PWM_PIN, WHEEL_MOTOR_A_DIRECTION_PIN, WHEEL_MOTOR_A_CURRENT_PIN, WHEELMOTOR_SMOOTHNESS);
 WHEELMOTOR leftMotor(WHEEL_MOTOR_B_PWM_PIN, WHEEL_MOTOR_B_DIRECTION_PIN, WHEEL_MOTOR_B_CURRENT_PIN, WHEELMOTOR_SMOOTHNESS);
-WHEELMOTOR frontMotor(WHEEL_MOTOR_C_PWM_PIN, WHEEL_MOTOR_C_DIRECTION_PIN, WHEELMOTOR_SMOOTHNESS);
 
 // Battery
 // Battery types available are LIION, LEAD_ACID, NIMH

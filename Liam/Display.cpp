@@ -25,10 +25,9 @@
 */
 
 #include "MyDisplay.h"
-//#include "myLcd.h"
 #include <LiquidCrystal_I2C.h>
 
-MYDISPLAY::MYDISPLAY(BATTERY* batt, WHEELMOTOR* left, WHEELMOTOR* right, CUTTERMOTOR* cut, BWFSENSOR* bwf, MOTIONSENSOR* comp, int* state)
+MYDISPLAY::MYDISPLAY(BATTERY& batt, WHEELMOTOR& left, WHEELMOTOR& right, CUTTERMOTOR& cut, BWFSENSOR& bwf, MOTIONSENSOR& comp, int* state)
 {
   Battery = batt;
   leftMotor = left;

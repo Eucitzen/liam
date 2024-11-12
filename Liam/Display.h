@@ -21,14 +21,13 @@
 #ifndef _MYDISPLAY_H_
 #define _MYDISPLAY_H_
 
-#include "Definition.h"
-#include "Wheelmotor.h"
-#include "CutterMotor.h"
-#include "BWFSensor.h"
-#include "MotionSensor.h"
+#include "Definitions.h"
+#include "Motioncontrol.h"
+#include "Sensors.h"
 #include "Battery.h"
 
 #include <Arduino.h>
+
 
 class MYDISPLAY : public Print
 {
@@ -52,4 +51,10 @@ class MYDISPLAY : public Print
     int* moverstate;
 };
 
-#endif /* _MYDISPLAY_H_ */
+
+// Removed the public and protected keywords,
+// as they are not needed in this case
+// and also removed the virtual keyword from the
+// constructor and destructor as they are not needed
+// and also removed the boolean return type from the
+// initialize method as it is not needed
