@@ -50,7 +50,7 @@ class MYDISPLAY : public Print
     MOTIONSENSOR* compass;
     int* moverstate;
 };
-
+#endif
 
 // Removed the public and protected keywords,
 // as they are not needed in this case

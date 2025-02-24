@@ -11,7 +11,7 @@ Placed under the GNU license
 */
 
 #include "Sensors.h"
-#include "Definition.h"
+#include "Definitions.h"
 
 // MPU-9150 sensor library
 

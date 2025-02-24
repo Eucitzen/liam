@@ -1,0 +1,510 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "f790c66d-ebd7-46e8-98e6-9a0282a3d599")
+	(paper "A4")
+	(lib_symbols)
+	(text "BATTERY CHARGE IC? LT1513"
+		(exclude_from_sim no)
+		(at 228.346 160.274 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f7e107ae-a4ce-458d-ae73-8a10d8646b81")
+	)
+	(text_box "REQUIREMENTS:\n10 PWM PINS MINIMUM\n2000 Sq METERS CUTTING AREA\n12 OR 18V COMPATIBLE\nDC-DC CONVERTER INSTEAD OF LINEAR\nEXPANDABLE??\nRUN NORMAL DC MOTORS\nSIMPLIFIED CURRENT CONTROL\nWIFI & BLUETOOTH OPTIONAL\n"
+		(exclude_from_sim no)
+		(at 210.82 108.585 0)
+		(size 58.42 54.61)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "446b1292-40f3-496a-86f3-17fe65e448c6")
+	)
+	(sheet
+		(at 58.42 100.965)
+		(size 109.855 90.805)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1a777515-9e61-4fb5-80f7-88f4bb73ec5c")
+		(property "Sheetname" "MCU & POWER INPUT"
+			(at 58.42 100.2534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU_POWER.kicad_sch"
+			(at 58.42 192.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Liam_PCB"
+				(path "/f790c66d-ebd7-46e8-98e6-9a0282a3d599"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 46.99 19.685)
+		(size 86.36 64.77)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4db284b5-1100-4df8-972b-3bd62f49db9c")
+		(property "Sheetname" "Sensors"
+			(at 46.99 18.9734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 46.99 85.0396 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SEL_BWF_B" input
+			(at 133.35 29.845 0)
+			(uuid "317cd6df-52ef-444b-923a-79f94f395b71")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SEL_BWF_A" input
+			(at 133.35 26.035 0)
+			(uuid "a3527624-f579-4223-8cd4-ca7572dafb42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BUMPER_LEFT" input
+			(at 133.35 36.195 0)
+			(uuid "563e8619-12ce-468d-9924-245f917a4053")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BUMPER_RIGHT" input
+			(at 133.35 38.735 0)
+			(uuid "b8cc976e-15e9-4b44-a1a3-ac2cebb5a58c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BUMPER_FRONT" input
+			(at 133.35 41.275 0)
+			(uuid "bc9b96fd-dad1-4263-bfc9-f42a49694226")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EDA" input
+			(at 133.35 48.895 0)
+			(uuid "489d6097-599e-4800-872b-ed80a311c2ca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "NCS" input
+			(at 133.35 56.515 0)
+			(uuid "38591c67-2c2b-4369-84f1-432128852686")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AD0" input
+			(at 133.35 59.055 0)
+			(uuid "239c6b9f-eb2b-489d-ae9c-c9ca24569f3d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FSYNC" input
+			(at 133.35 61.595 0)
+			(uuid "00bdef45-5a67-49c8-858e-f505baf1b896")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ECL" input
+			(at 133.35 64.135 0)
+			(uuid "d6a6e847-40a3-405f-bd98-ffc26cbdbc4e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "INT" input
+			(at 133.35 66.675 0)
+			(uuid "5c5f9f32-c0ee-4675-a172-8700b817aad3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BWF_INTERRUPT" input
+			(at 133.35 22.225 0)
+			(uuid "552f17b5-c9d2-465a-a4e3-c4d5cb260f4a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RIGHT_TRIG" input
+			(at 133.35 71.755 0)
+			(uuid "d8641546-dcc0-4099-8b10-83957dcecaa9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RIGHT_ECHO" input
+			(at 133.35 74.295 0)
+			(uuid "ac5ef5db-8cf9-4633-a1a5-c81fabf6e287")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "LEFT_TRIG" input
+			(at 133.35 76.835 0)
+			(uuid "cd35d6a9-f968-4441-9d8c-fdfbf9be03cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "LEFT_ECHO" input
+			(at 133.35 79.375 0)
+			(uuid "55abc6a1-758b-487a-a718-cb875520e723")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FRONT_TRIG" input
+			(at 133.35 81.915 0)
+			(uuid "088e1c42-0228-414e-a852-e54d2b9b9b72")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FRONT_ECHO" input
+			(at 115.57 84.455 270)
+			(uuid "b13c5b6b-4ce5-49bc-87a0-cd654e844bfc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RX1" input
+			(at 101.6 84.455 270)
+			(uuid "84a140c3-7ae4-4366-be5e-4af09f724821")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "TX1" input
+			(at 99.06 84.455 270)
+			(uuid "5ac1fe32-819f-4d83-b12a-060308b7e753")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCL1" input
+			(at 133.35 51.435 0)
+			(uuid "89d88076-076a-4fa4-a83c-81c63eb73aa9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA1" input
+			(at 133.35 53.975 0)
+			(uuid "cd377e10-3974-45bf-a9ea-70f1ba143896")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TX2" input
+			(at 83.82 84.455 270)
+			(uuid "77b172c7-6394-4b80-95e8-d5b3597f513f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RX2" input
+			(at 86.36 84.455 270)
+			(uuid "dbd93963-cac1-4969-9d57-3cf84b7acd88")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Liam_PCB"
+				(path "/f790c66d-ebd7-46e8-98e6-9a0282a3d599"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 198.12 16.51)
+		(size 72.39 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8af2f8f3-301e-4a11-9170-f7669da4cacd")
+		(property "Sheetname" "Motorcontrol"
+			(at 198.12 15.7984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "motor.kicad_sch"
+			(at 198.12 80.5946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "frontmotor_pwm" input
+			(at 198.12 43.18 180)
+			(uuid "e0417a1c-4030-4a91-87aa-2022db60407e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "frontmotor_brake" input
+			(at 198.12 45.72 180)
+			(uuid "68338275-46f0-4be9-9f9d-8fd5d01e62bd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "leftmotor_pwm" input
+			(at 198.12 49.53 180)
+			(uuid "240876b3-9f5d-47b1-977b-125279d48f42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "leftmotor_brake" input
+			(at 198.12 52.07 180)
+			(uuid "16bf3329-6a1b-4787-b32c-56bed1323c56")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "rightmotor_pwm" input
+			(at 198.12 57.15 180)
+			(uuid "d695815b-a7ba-40bf-b949-f09e40f12342")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "rightmotor_brake" input
+			(at 198.12 59.69 180)
+			(uuid "50b7631c-0bfa-41ae-9ab0-127afb8011b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "frontleftmotor_brake" input
+			(at 198.12 63.5 180)
+			(uuid "9869ec9c-1ae0-4025-8fa1-14740ecf996d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "frontleftmotor_pwm" input
+			(at 198.12 66.04 180)
+			(uuid "aeda5f98-e9b1-4c39-ba4b-9e34e8f436e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "cuttermotor_pwm" input
+			(at 198.12 71.12 180)
+			(uuid "f0c01fe2-94d1-40cb-b93a-bda901c8cb63")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "cuttermotor_brake" input
+			(at 198.12 74.93 180)
+			(uuid "d33d99e3-8c16-45af-ac52-039251e2e103")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Liam_PCB"
+				(path "/f790c66d-ebd7-46e8-98e6-9a0282a3d599"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

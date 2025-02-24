@@ -24,8 +24,8 @@
   but make sure to also call MYDISPLAY::initialize()
 */
 
-#include "MyDisplay.h"
-#include <LiquidCrystal_I2C.h>
+#include "Display.h"
+
 
 MYDISPLAY::MYDISPLAY(BATTERY& batt, WHEELMOTOR& left, WHEELMOTOR& right, CUTTERMOTOR& cut, BWFSENSOR& bwf, MOTIONSENSOR& comp, int* state)
 {
@@ -65,12 +65,14 @@ void MYDISPLAY::update()
   print(!sensor->isOutOfBounds(0));
   print(!sensor->isOutOfBounds(1));
 
-  print("\n");
+// Motor current no longer in use, MS9150 and current limited motor drivers replace this 
+/*  print("\n");
   // Row 2: Motor load
   print(F("LMoto: "));
   print(leftMotor->getLoad());
   print(F(" RMoto: "));
   print(rightMotor->getLoad());
+  */
 
   print("\n");
   // Row 3: Battery

@@ -10,7 +10,6 @@ Placed under the GNU license
 */
 #include <Arduino.h>
 #include <Wire.h>  // For LCD
-#include "MyDisplay.h"
 #include "Motioncontrol.h"
 
 #ifndef _ERROR_H_

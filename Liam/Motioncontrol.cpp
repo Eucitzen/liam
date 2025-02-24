@@ -12,7 +12,7 @@ Placed under the GNU license
 
 
 #include "Motioncontrol.h"
-#include "Definition.h"
+#include "Definitions.h"
 
 /** Wheelmotor controller. */
 

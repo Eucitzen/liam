@@ -36,8 +36,6 @@
 
 #include <Servo.h>
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
-//#include <I2Cdev.h>
 #include "Battery.h"
 #include "Clock.h"
 #include "Error.h"
@@ -89,7 +87,7 @@ CONTROLLER Mower(&leftMotor, &rightMotor, &CutterMotor, &Sensor, &Compass);
 // Display
 #if defined __LCD__ 
 	myLCD Display(&Battery, &leftMotor, &rightMotor, &CutterMotor, &Sensor, &Compass, &state);
-#else
+#else;
 	MYDISPLAY Display(&Battery, &leftMotor, &rightMotor, &CutterMotor, &Sensor, &Compass, &state);
 #endif
 

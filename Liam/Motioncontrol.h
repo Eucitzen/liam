@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "Sensors.h"
-#include "Definition.h"
+#include "Definitions.h"
 
 
 #ifndef _CONTROLLER_H_

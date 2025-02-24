@@ -7,11 +7,8 @@ Placed under the GNU license
 
 ===============================================
 */
-#include <Wire.h>  // For Compass
-#include <I2Cdev.h>
-#include <Sensors.h>
-#include "Definition.h"
-#include <Arduino.h>
+
+#include "Definitions.h"
 
 #ifndef _MS9150_H_
 #define _MS9150_H_
@@ -73,7 +70,7 @@ Placed under the GNU license
 #ifndef _MS5883L_H_
 #define _MS5883L_H_
 
-class MS5883L : public MOTIONSENSOR {
+class MS5883L : public MOTIONSENSOR{
     public:
         explicit MS5883L();
         virtual boolean initialize();
@@ -86,7 +83,7 @@ class MS5883L : public MOTIONSENSOR {
     private:
     	MS5883L sensor;
 
-}
+};
 
 #endif /* _COMPASS_H_ */
 
