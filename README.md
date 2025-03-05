@@ -54,7 +54,23 @@ The following libraries must be added to your arduino IDE to be able to compile 
 
 Change log
 ------
-5.1  - Removed OzOLED Support for Arduino101 Compatibility
+Change log
+------
+2025-03:
+- Further cleaning up library code
+- Started working on PCB using STM32F407VET6TR & ESP32 module
+
+2024-12:
+- Remade the libraries into relevant categories (e.g. "sensors", "display", "motioncontrol")
+- Started removing superflourous libraries for newer Arduino versions
+- Cleaning up code for STM32 microcontrollers, found even the STM32 Blackpill has too few pins
+
+2024-11:
+- Remade to suite a STM32 Blackpill board, new version needs more pins
+- Merged several libraries into distinct categories
+- Beta stuck detection using MPU9150
+- Added and test printed 3D models for a larger mower
+
 
 Links
 ------
